@@ -1,0 +1,48 @@
+/**
+ * ABOUT.CSS — About / Contact page styles
+ */
+
+.about-hero {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .about-hero {
+    margin-bottom: var(--space-12);
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+}
+
+.about-content h3 {
+  margin-bottom: var(--space-4);
+}
+
+.about-content p {
+  line-height: 1.7;
+}
+
+.contact-form {
+  background: var(--color-white);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    padding: var(--space-8);
+  }
+}

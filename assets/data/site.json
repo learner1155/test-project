@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Welcome to PureShop",
+    "subtitle": "Quality products, honest prices. Built entirely with vanilla HTML, CSS & JavaScript — no frameworks.",
+    "ctaText": "Shop Now",
+    "ctaLink": "pages/products.html"
+  },
+  "features": [
+    {
+      "icon": "🚚",
+      "title": "Free Shipping",
+      "description": "On orders above ₹2,000. Fast and reliable delivery."
+    },
+    {
+      "icon": "🔒",
+      "title": "Secure Payment",
+      "description": "Your data is protected with industry-standard security."
+    },
+    {
+      "icon": "↩️",
+      "title": "Easy Returns",
+      "description": "30-day hassle-free return policy on all products."
+    }
+  ],
+  "shipping": {
+    "freeThreshold": 2000,
+    "flatRate": 99,
+    "currency": "₹"
+  },
+  "about": {
+    "title": "About PureShop",
+    "subtitle": "A demonstration of what pure web technologies can achieve"
+  }
+}

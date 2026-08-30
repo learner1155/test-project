@@ -1,0 +1,170 @@
+/**
+ * LAYOUT.CSS — Industrial / corporate website pattern
+ *
+ * HOW IT WORKS:
+ *
+ *   section (100vw bg) → .site-wrap (max-width: 1440px) → .container (max-width: 1368px)
+ *
+ *   At 1600px screen: site-wrap = 1440px centered, container = 1368px inside it.
+ *   At 1440px screen: site-wrap = 1440px, container = 1368px, gutters = 36px each side.
+ */
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-gray-50);
+}
+
+main {
+  flex: 1;
+  padding: var(--space-6) 0;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: var(--space-8) 0;
+  }
+}
+
+/*
+ * SITE-WRAP — 1440px design zone (direct max-width)
+ * Centered on screens wider than 1440px.
+ * Section backgrounds (header, hero, footer) still span 100vw edge-to-edge.
+ */
+.site-wrap {
+  width: 100%;
+  max-width: var(--site-max-width);
+  margin-inline: auto;
+}
+
+/* Mobile edge padding when below design width */
+@media (max-width: 1439px) {
+  .site-wrap {
+    padding-inline: var(--container-padding);
+  }
+}
+
+/*
+ * CONTAINER — 1368px max content
+ * Centered inside the 1440px site-wrap.
+ * At 1440px viewport → 36px gutter each side: (1440 - 1368) / 2
+ */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+}
+
+/* Full-bleed within site-wrap (spans the 1440px zone, not 1368px) */
+.container--wide {
+  max-width: var(--site-max-width);
+}
+
+.section {
+  padding: var(--space-8) 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+}
+
+.section-title {
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    margin-bottom: var(--space-8);
+  }
+}
+
+.section-title h2 {
+  margin-bottom: var(--space-2);
+}
+
+/* ---- Responsive Grid (Mobile-First) ---- */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .grid { gap: var(--space-6); }
+}
+
+.grid--2,
+.grid--3,
+.grid--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---- Flex Utilities ---- */
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-2 { gap: var(--space-2); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+
+.stack-to-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .stack-to-row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.hide-mobile { display: none; }
+
+@media (min-width: 768px) {
+  .hide-mobile { display: initial; }
+  .hide-desktop { display: none; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  input, select, textarea { font-size: 16px; }
+}

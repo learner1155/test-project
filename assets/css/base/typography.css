@@ -1,0 +1,53 @@
+/**
+ * TYPOGRAPHY.CSS
+ * --------------
+ * Base text styles with fluid scaling for responsive screens.
+ * clamp(min, preferred, max) keeps text readable on all devices.
+ */
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-800);
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-gray-900);
+}
+
+/* Fluid headings: scale smoothly between mobile and desktop */
+h1 { font-size: clamp(1.75rem, 4vw, var(--font-size-4xl)); }
+h2 { font-size: clamp(1.5rem, 3vw, var(--font-size-3xl)); }
+h3 { font-size: clamp(1.25rem, 2.5vw, var(--font-size-2xl)); }
+h4 { font-size: var(--font-size-xl); }
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+.text-muted {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Prevent long words/URLs from breaking layout on small screens */
+p,
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}

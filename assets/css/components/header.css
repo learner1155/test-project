@@ -1,0 +1,155 @@
+/**
+ * HEADER.CSS
+ * ----------
+ * Styles for the <site-header> Web Component.
+ * The component injects this markup; styles live here for separation.
+ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+.site-header .site-wrap {
+  height: 100%;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.site-header__logo {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.site-header__logo span {
+  color: var(--color-gray-900);
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.site-header__link {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-gray-600);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.site-header__link:hover,
+.site-header__link--active {
+  color: var(--color-primary);
+}
+
+.site-header__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.site-header__cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-gray-100);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: background var(--transition-fast);
+}
+
+.site-header__cart:hover {
+  background: var(--color-primary-light);
+}
+
+.site-header__cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 var(--space-1);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-full);
+}
+
+/* Mobile menu toggle (hidden on desktop) */
+.site-header__menu-btn {
+  display: none;
+  font-size: var(--font-size-2xl);
+  color: var(--color-gray-700);
+  min-width: var(--touch-target-min);
+  min-height: var(--touch-target-min);
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Mobile Navigation (below 768px) ---- */
+@media (max-width: 767px) {
+  .site-header__menu-btn {
+    display: flex;
+  }
+
+  .site-header__nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--color-white);
+    padding: var(--space-4) var(--container-padding);
+    border-bottom: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-md);
+  }
+
+  .site-header__nav--open {
+    display: flex;
+  }
+
+  .site-header__link {
+    padding: var(--space-3) 0;
+    font-size: var(--font-size-base);
+    min-height: var(--touch-target-min);
+    display: flex;
+    align-items: center;
+  }
+
+  .site-header__link--active::after {
+    bottom: var(--space-2);
+  }
+
+  .site-header__cart {
+    justify-content: center;
+    margin-top: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    min-height: var(--touch-target-min);
+  }
+}

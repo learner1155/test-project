@@ -1,0 +1,77 @@
+/**
+ * CARDS.CSS
+ * ---------
+ * Product card component used on home and products pages.
+ */
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+/* Hover lift only on devices with a mouse (avoids sticky hover on touch) */
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+}
+
+.card__image {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--color-gray-100), var(--color-gray-200));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(2rem, 8vw, 3rem);
+}
+
+.card__body {
+  padding: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .card__body {
+    padding: var(--space-5);
+  }
+}
+
+.card__category {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-2);
+}
+
+.card__price {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-4);
+}
+
+.card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@media (min-width: 400px) {
+  .card__actions {
+    flex-direction: row;
+  }
+}
+
+.card__actions .btn {
+  flex: 1;
+}

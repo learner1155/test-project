@@ -1,0 +1,44 @@
+/* Debug: ?debug=layout or Ctrl+Shift+D */
+body.debug-layout .site-wrap {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+body.debug-layout .container {
+  outline: 3px solid #16a34a;
+  outline-offset: -3px;
+  background: rgba(22, 163, 74, 0.08);
+}
+
+.layout-debug-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  padding: 10px 16px;
+  background: #0f172a;
+  color: #f8fafc;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.layout-debug-bar strong { color: #fbbf24; }
+
+.debug-tag {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.debug-tag--viewport { background: #94a3b8; color: #1e293b; }
+.debug-tag--site { background: #2563eb; color: #fff; }
+.debug-tag--container { background: #16a34a; color: #fff; }

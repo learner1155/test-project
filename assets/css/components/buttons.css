@@ -1,0 +1,75 @@
+/**
+ * BUTTONS.CSS
+ * -----------
+ * Reusable button styles. Use BEM-like naming:
+ * .btn (base) + .btn--primary (modifier) + .btn--lg (size)
+ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              box-shadow var(--transition-fast);
+  white-space: nowrap;
+  min-height: var(--touch-target-min); /* Accessible tap target on mobile */
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn--secondary {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-800);
+  border: 1px solid var(--color-gray-200);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-gray-200);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary-light);
+}
+
+.btn--danger {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+.btn--danger:hover {
+  background-color: #b91c1c;
+}
+
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-xs);
+}
+
+.btn--lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-size-base);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

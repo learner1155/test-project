@@ -1,0 +1,65 @@
+/**
+ * HOME.CSS — Styles specific to the landing page (index.html)
+ */
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+  color: var(--color-white);
+  padding: var(--space-10) 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: var(--space-16) 0;
+  }
+}
+
+.hero h1 {
+  color: var(--color-white);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--space-4);
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--font-size-lg);
+  max-width: 600px;
+  margin: 0 auto var(--space-8);
+}
+
+.hero .btn--primary {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.hero .btn--primary:hover {
+  background: var(--color-gray-100);
+}
+
+.features {
+  background: var(--color-white);
+}
+
+/* Content sections: light bg only inside container area feel */
+.section {
+  background: var(--color-gray-50);
+}
+
+.feature {
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.feature__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+}
+
+.feature h3 {
+  margin-bottom: var(--space-2);
+}
+
+.feature p {
+  font-size: var(--font-size-sm);
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="PureShop — A demo e-commerce store built with pure HTML, CSS, and JavaScript.">
+
+  <title>PureShop — Home</title>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+
+
+  <!--
+
+    Industrial layout pattern:
+
+    section (100vw full bleed) → .site-wrap (1440px zone) → .container (1368px content)
+
+  -->
+
+  <site-header active="home"></site-header>
+
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="site-wrap">
+
+        <div class="container" data-hero>
+
+          <p class="text-muted">Loading...</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="section">
+
+      <div class="site-wrap">
+
+        <div class="container">
+
+          <div class="section-title">
+
+            <h2>Featured Products</h2>
+
+            <p class="text-muted">Hand-picked items just for you</p>
+
+          </div>
+
+          <div class="grid grid--4" data-featured-products>
+
+            <p class="text-muted text-center">Loading products...</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="section features">
+
+      <div class="site-wrap">
+
+        <div class="container">
+
+          <div class="grid grid--3" data-features>
+
+            <p class="text-muted text-center">Loading...</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <site-footer></site-footer>
+
+
+
+  <script type="module" src="assets/js/components/header.js"></script>
+
+  <script type="module" src="assets/js/components/footer.js"></script>
+
+  <script type="module" src="assets/js/pages/home.js"></script>
+
+  <script type="module" src="assets/js/core/layout-debug.js"></script>
+
+
+
+</body>
+
+</html>
+

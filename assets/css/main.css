@@ -1,0 +1,35 @@
+/**
+ * MAIN.CSS
+ * --------
+ * Single entry point that imports all stylesheets.
+ *
+ * ARCHITECTURE NOTE:
+ * In a no-build-tool setup, we use @import in one file so each HTML page
+ * only needs ONE <link> tag. Browsers load these sequentially.
+ *
+ * For production at scale, you might manually concatenate into one file,
+ * but @import keeps development clean without Node or bundlers.
+ */
+
+/* Base layer */
+@import url("./base/reset.css");
+@import url("./base/variables.css");
+@import url("./base/typography.css");
+
+/* Layout */
+@import url("./layout.css");
+
+/* Components */
+@import url("./components/buttons.css");
+@import url("./components/cards.css");
+@import url("./components/header.css");
+@import url("./components/footer.css");
+@import url("./components/forms.css");
+
+/* Page-specific (loaded on all pages for simplicity; for large sites,
+   load only the page CSS you need per HTML file) */
+@import url("./pages/home.css");
+@import url("./pages/products.css");
+@import url("./pages/product-detail.css");
+@import url("./pages/cart.css");
+@import url("./pages/about.css");

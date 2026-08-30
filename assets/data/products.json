@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "name": "Wireless Headphones",
+      "category": "electronics",
+      "price": 2999,
+      "description": "Premium over-ear wireless headphones with active noise cancellation, 30-hour battery life, and crystal-clear audio for music lovers and professionals.",
+      "emoji": "🎧",
+      "featured": true
+    },
+    {
+      "id": "p2",
+      "name": "Smart Watch Pro",
+      "category": "electronics",
+      "price": 4999,
+      "description": "Track your fitness, receive notifications, and monitor your health with this sleek smartwatch featuring AMOLED display and 7-day battery.",
+      "emoji": "⌚",
+      "featured": true
+    },
+    {
+      "id": "p3",
+      "name": "Organic Cotton T-Shirt",
+      "category": "clothing",
+      "price": 799,
+      "description": "Soft, breathable 100% organic cotton t-shirt. Available in multiple colors. Sustainably sourced and ethically manufactured.",
+      "emoji": "👕",
+      "featured": true
+    },
+    {
+      "id": "p4",
+      "name": "Running Shoes",
+      "category": "clothing",
+      "price": 3499,
+      "description": "Lightweight running shoes with responsive cushioning and breathable mesh upper. Designed for daily training and long-distance runs.",
+      "emoji": "👟",
+      "featured": true
+    },
+    {
+      "id": "p5",
+      "name": "Ceramic Coffee Mug",
+      "category": "home",
+      "price": 499,
+      "description": "Handcrafted ceramic mug with a comfortable handle. Microwave and dishwasher safe. Holds 350ml of your favorite beverage.",
+      "emoji": "☕",
+      "featured": false
+    },
+    {
+      "id": "p6",
+      "name": "Desk Lamp LED",
+      "category": "home",
+      "price": 1299,
+      "description": "Adjustable LED desk lamp with three brightness levels and warm/cool light modes. Perfect for reading, working, or studying.",
+      "emoji": "💡",
+      "featured": false
+    },
+    {
+      "id": "p7",
+      "name": "Yoga Mat",
+      "category": "fitness",
+      "price": 1499,
+      "description": "Non-slip eco-friendly yoga mat with 6mm cushioning. Includes carrying strap. Ideal for yoga, pilates, and floor exercises.",
+      "emoji": "🧘",
+      "featured": false
+    },
+    {
+      "id": "p8",
+      "name": "Water Bottle 1L",
+      "category": "fitness",
+      "price": 599,
+      "description": "Insulated stainless steel water bottle keeps drinks cold for 24 hours. BPA-free, leak-proof lid, fits standard cup holders.",
+      "emoji": "🍶",
+      "featured": false
+    }
+  ]
+}

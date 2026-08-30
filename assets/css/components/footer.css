@@ -1,0 +1,87 @@
+/**
+ * FOOTER.CSS
+ * ----------
+ * Styles for the <site-footer> Web Component.
+ */
+
+.site-footer {
+  background: var(--color-secondary);
+  color: var(--color-gray-300);
+  padding: var(--space-8) 0 var(--space-6);
+  margin-top: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    padding: var(--space-12) 0 var(--space-6);
+  }
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.site-footer__brand {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.site-footer__brand span {
+  color: var(--color-primary);
+}
+
+.site-footer__desc {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--color-gray-400);
+}
+
+.site-footer__heading {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.site-footer__link {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  margin-bottom: var(--space-2);
+  transition: color var(--transition-fast);
+}
+
+.site-footer__link:hover {
+  color: var(--color-white);
+}
+
+.site-footer__bottom {
+  width: 100%;
+  margin: var(--space-8) auto 0;
+  padding: var(--space-6) 0 0;
+  border-top: 1px solid var(--color-gray-700);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+}
